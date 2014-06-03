@@ -11,6 +11,6 @@ public class Score:MonoBehaviour {
 
 	void Update () {
 		score += 1;
-		guiText.text = "Score : " + score;
+		guiText.text = "" + score;
 	}
 }

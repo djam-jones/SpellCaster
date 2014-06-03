@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour {
 	{
 		currentHealth = startHealth;
 
-		spacingX = heartGUI.pixelInset.width;
+		spacingX = heartGUI.pixelInset.width + 5f;
 		spacingY = -heartGUI.pixelInset.height;
 		AddHearts(startHealth/healthPerHeart);
 	}
@@ -36,7 +36,7 @@ public class PlayerHealth : MonoBehaviour {
 			int y = Mathf.FloorToInt(hearts.Count/maxHeartsPerRow);
 			int x = hearts.Count - y * maxHeartsPerRow;
 
-			newHeart.GetComponent<GUITexture>().pixelInset = new Rect(x * spacingX, y * spacingY, 35, 35);
+			newHeart.GetComponent<GUITexture>().pixelInset = new Rect(x * spacingX, y * spacingY, 60, 55);
 			hearts.Add(newHeart);
 		}
 

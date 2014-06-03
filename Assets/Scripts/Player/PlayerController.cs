@@ -50,4 +50,9 @@ public class PlayerController : MonoBehaviour {
 			onGround = true;
 		}
 	}
+
+	void OnBecameInvisible()
+	{
+		Application.LoadLevel("DeathScreen");
+	}
 }

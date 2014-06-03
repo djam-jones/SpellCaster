@@ -10,7 +10,7 @@ public class EndScreen : MonoBehaviour {
 			Application.LoadLevel(gameScene);
 		}
 		if(GUI.Button(new Rect(Screen.width/1.5f, Screen.height/3f ,100,25), "Quit")){
-			//Application.Quit;
+			Application.Quit();
 		}
 	}
 }
