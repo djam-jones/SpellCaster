@@ -3,9 +3,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	public int speed = 15;
+	public int speed = 12;
 	public int gravity = 6;
-	public int jumpForce = 300;
+	public int jumpForce = 500;
 	public float jumpSpeed = 3f;
 	private bool onGround = true;
 	
@@ -19,10 +19,15 @@ public class PlayerController : MonoBehaviour {
 	void Update()
 	{
 		//Fetch Input for movement on the X Axis
-		float x = Input.GetAxis("Horizontal");
+		if(Input.GetKey(KeyCode.A))
+		{
+			this.transform.Translate(Vector3.left * speed * Time.deltaTime);
+		}
 
-		//Lets you move on the X Axis
-		this.transform.Translate(new Vector2(x, 0) * speed * Time.deltaTime);
+		if(Input.GetKey(KeyCode.D))
+		{
+			this.transform.Translate(-Vector3.left * speed * Time.deltaTime);
+		}
 
 		//If you're on the ground you will be able to jump
 		if(onGround == true)
