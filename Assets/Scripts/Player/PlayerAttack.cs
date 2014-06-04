@@ -13,7 +13,17 @@ public class PlayerAttack : MonoBehaviour {
 	}
 
 	void Update () {
-		if(Input.GetKeyDown(KeyCode.E))
+		if(Input.GetButtonDown("Up"))
+		{
+			Attack();
+		}
+
+		if(Input.GetButtonDown("Left"))
+		{
+			Attack();
+		}
+
+		if(Input.GetButtonDown("Right"))
 		{
 			Attack();
 		}

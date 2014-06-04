@@ -8,12 +8,22 @@ public class PlayerController : MonoBehaviour {
 	public int jumpForce = 500;
 	public float jumpSpeed = 3f;
 	private bool onGround = true;
+	private bool facingRight = true;
 	
-	protected Animator anim;
-	
+	private Animator anim;
+
 	void Start()
 	{
 		anim = GetComponent<Animator>();
+	}
+
+	void Flip()
+	{
+		facingRight = !facingRight;
+		
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 
 	void Update()
@@ -22,11 +32,20 @@ public class PlayerController : MonoBehaviour {
 		if(Input.GetKey(KeyCode.A))
 		{
 			this.transform.Translate(Vector3.left * speed * Time.deltaTime);
+			if(facingRight)
+			{
+				Flip();      
+			}
+
 		}
 
 		if(Input.GetKey(KeyCode.D))
 		{
 			this.transform.Translate(-Vector3.left * speed * Time.deltaTime);
+			if(!facingRight)
+			{
+				Flip();
+			}
 		}
 
 		//If you're on the ground you will be able to jump
@@ -36,6 +55,7 @@ public class PlayerController : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.W))
 			{
 				Jump();
+				//anim.SetBool("Jump", isJumping);
 			}	
 		}
 	}
@@ -46,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 		this.transform.rigidbody2D.AddForce(Vector3.up * jumpSpeed * jumpForce);
 		onGround = false;
 	}
-
+	
 	//Checks if you're on the ground
 	void OnCollisionEnter2D (Collision2D hit)
 	{
