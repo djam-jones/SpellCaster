@@ -36,7 +36,13 @@ public class PlayerController : MonoBehaviour {
 			{
 				Flip();      
 			}
-
+		}
+		if(Input.GetKeyUp(KeyCode.A))
+		{
+			if(!facingRight)
+			{
+				Flip();
+			}
 		}
 
 		if(Input.GetKey(KeyCode.D))
@@ -78,6 +84,6 @@ public class PlayerController : MonoBehaviour {
 
 	void OnBecameInvisible()
 	{
-		Application.LoadLevel("DeathScreen");
+		Application.LoadLevel(Application.loadedLevel);
 	}
 }
