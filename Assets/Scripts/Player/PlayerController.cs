@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour {
 
 	public int speed = 12;
 	public int gravity = 6;
-	public int jumpForce = 500;
+	public int jumpForce = 475;
 	public float jumpSpeed = 3f;
 	private bool onGround = true;
 	private bool facingRight = true;
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour {
 			if(Input.GetKeyDown(KeyCode.W))
 			{
 				Jump();
-				//anim.SetBool("Jump", isJumping);
+				anim.SetBool("Jump", true);
 			}	
 		}
 	}
@@ -79,11 +79,12 @@ public class PlayerController : MonoBehaviour {
 		if(hit.transform.tag == "platform")
 		{
 			onGround = true;
+			anim.SetBool("Jump", false);
 		}
 	}
 
 	void OnBecameInvisible()
 	{
-		Application.LoadLevel(Application.loadedLevel);
+		Application.LoadLevel("Deathscreen");
 	}
 }

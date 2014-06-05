@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
 	public int healthPerHeart;
 
 	public int currentHealth;
-	private int maxHealth;
+	public int maxHealth;
 
 	public GUITexture heartGUI;
 	public Texture[] images;

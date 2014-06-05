@@ -4,7 +4,6 @@ using System.Collections;
 public class TakeHealth : MonoBehaviour {
 
 	public PlayerHealth health;
-	private int Enemies;
 		
 	void Update()
 	{
@@ -14,7 +13,7 @@ public class TakeHealth : MonoBehaviour {
 		}
 	}
 	
-	void OnTriggerEnter2D (Collider2D other)
+	void OnCollisionEnter2D (Collision2D other)
 	{
 		if(other.transform.tag == "Enemy")
 		{

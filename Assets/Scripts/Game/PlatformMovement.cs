@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlatformMovement : MonoBehaviour {
 
-	public float movementSpeed = 15;
+	public float movementSpeed = 12;
 	public Vector2 direction = Vector3.left;
 
 	void Start () {

@@ -39,7 +39,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	void Attack()
 	{
 		attackDelay = Time.deltaTime + attackCooldown;
-		health.ModifyHealth(-1);
+		//health.ModifyHealth(-1);
 		//target.GetComponent<PlayerHealth>().ModifyHealth(doDMG);
 		Debug.Log("GET OVER HERE!!");
 	}
