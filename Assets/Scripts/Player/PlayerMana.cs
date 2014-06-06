@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Geschreven Door Djamali
+
+using UnityEngine;
 using System.Collections;
 
 public class PlayerMana : MonoBehaviour {
@@ -19,7 +21,7 @@ public class PlayerMana : MonoBehaviour {
 	void OnGUI()
 	{
 		//GUI.DrawTexture(new Rect(63, 87, manaBarWidth, manaBarHeight), manaBar);
-		GUI.Box(new Rect(63, 87, manaBarWidth, manaBarHeight),  currentMana + ":" + maxMana, manaBar);
+		GUI.Box(new Rect(63, 87, manaBarWidth, manaBarHeight),  /*currentMana + ":" + maxMana*/ "", manaBar);
 	}
 
 	void Update() {

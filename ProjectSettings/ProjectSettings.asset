@@ -11,7 +11,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Clisto Entertainment
-  productName: SpellCaster v0.1.5
+  productName: SpellCaster
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 960
@@ -108,16 +108,16 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  resolutionDialogBanner: {fileID: 2800000, guid: ded18c5e38ced4b73ab048aa2e6ca533,
+  resolutionDialogBanner: {fileID: 2800000, guid: a25939b83ec72407180fc2c1067eacf1,
     type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: ded18c5e38ced4b73ab048aa2e6ca533, type: 3}
+    - m_Icon: {fileID: 2800000, guid: a25939b83ec72407180fc2c1067eacf1, type: 3}
       m_Size: 128
   - m_BuildTarget: Standalone
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: ded18c5e38ced4b73ab048aa2e6ca533, type: 3}
+    - m_Icon: {fileID: 2800000, guid: a25939b83ec72407180fc2c1067eacf1, type: 3}
       m_Size: 1024
     - m_Icon: {fileID: 0}
       m_Size: 512

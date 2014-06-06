@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Geschreven door Rishaad
+
+using UnityEngine;
 using System.Collections;
 
 public class EnemyWalkLeft : MonoBehaviour {

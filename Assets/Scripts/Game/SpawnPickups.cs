@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Geschreven Door Djamali
+
+using UnityEngine;
 using System.Collections;
 
 public class SpawnPickups : MonoBehaviour {
@@ -7,7 +9,7 @@ public class SpawnPickups : MonoBehaviour {
 	public Transform[] allSpawns;
 
 	private bool spawning = false;
-	public float timer = 10.0f;
+	public float timer = 5.0f;
 	public float randomSpawn;
 
 	void Update() 
@@ -21,7 +23,7 @@ public class SpawnPickups : MonoBehaviour {
 		{
 			Spawn();
 		}
-		randomSpawn = Random.Range(0, 1525);
+		randomSpawn = Random.Range(0, 2225);
 	}
 
 	void Spawn()

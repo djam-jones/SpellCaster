@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Geschreven door Djamali
+
+using UnityEngine;
 using System.Collections;
 
 public class SpawnEnemies:MonoBehaviour {
